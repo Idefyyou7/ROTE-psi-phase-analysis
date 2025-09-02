@@ -1,0 +1,36 @@
+{
+  "limit": 100000000,
+  "segment": 1000000,
+  "decimate": 25,
+  "N_kept": 230443,
+  "shells_nonempty": 27,
+  "mu_global_deg": 14.865636037188754,
+  "PLV_global": 0.07183626474720096,
+  "rayleigh_Z": 1189.1893334281317,
+  "rayleigh_p": 0.0,
+  "mu_shell_weighted_deg": 264.7785122707412,
+  "PLV_shell_weighted": 0.8459408920348992,
+  "PLV_shell_mean": 0.1933900922687689,
+  "null_trials": 3,
+  "null_results": [
+    {
+      "PLV_global": 0.0012327195210008828,
+      "mu_global_deg": 354.94072241136337,
+      "PLV_shell_weighted": 0.0871827334186123,
+      "mu_shell_weighted_deg": 74.50125285999287
+    },
+    {
+      "PLV_global": 0.0005065374265783404,
+      "mu_global_deg": 306.2297386402699,
+      "PLV_shell_weighted": 0.11869986351900795,
+      "mu_shell_weighted_deg": 239.97144121585822
+    },
+    {
+      "PLV_global": 0.0024450658363790027,
+      "mu_global_deg": 256.1855874569537,
+      "PLV_shell_weighted": 0.24972251413477872,
+      "mu_shell_weighted_deg": 260.05541221431395
+    }
+  ],
+  "mapping": "theta = 2*pi * frac( ln(p)/ln(phi) ), phi=(1+sqrt(5))/2, no mod-180, origin at frac=0"
+}
