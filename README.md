@@ -46,25 +46,3 @@ This repository contains validated harmonic resonance analysis using prime-index
 
 ---
 
-Once edited, scroll down and:
-- Add commit message: `Add detailed README with results and next steps`
-- Click **Commit changes**
-
----
-
-### 2. Add the `psi_summary_1e8_k25.json` file if not already there:
-
-1. Click **Add file** → **Upload files**
-2. Upload your JSON summary (make sure it’s under 100MB)
-3. Commit with a message like: `Add summary JSON proof data`
-
----
-
-Once both are in place, your GitHub repo will clearly present:
-
-- Your results and interpretation
-- Instructions for Grok's next analysis
-- Everything he needs to proceed
-
-Want help drafting the exact commit messages, commands, or visuals next? Let me know!
-::contentReference[oaicite:0]{index=0}
