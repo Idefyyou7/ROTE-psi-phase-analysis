@@ -1,0 +1,40 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load shell stats file (replace with correct filename if needed)
+df = pd.read_csv('psi_shell_stats_1e8_k25.csv')
+
+# Filter ridge and void shells
+ridge = df[df['plv'] >= 0.75].copy()
+void = df[df['plv'] <= 0.25].copy()
+
+# Convert μ from degrees to radians
+ridge['theta_rad'] = np.deg2rad(ridge['mu'])
+void['theta_rad'] = np.deg2rad(void['mu'])
+
+# Set radius as shell index
+ridge['r'] = ridge['shell_index']
+void['r'] = void['shell_index']
+
+# Convert polar to Cartesian for plotting
+ridge['x'] = ridge['r'] * np.cos(ridge['theta_rad'])
+ridge['y'] = ridge['r'] * np.sin(ridge['theta_rad'])
+
+void['x'] = void['r'] * np.cos(void['theta_rad'])
+void['y'] = void['r'] * np.sin(void['theta_rad'])
+
+# Plot
+plt.figure(figsize=(10, 10))
+plt.scatter(void['x'], void['y'], s=1, color='lightgray', label='Voids (PLV ≤ 0.25)', alpha=0.5)
+plt.scatter(ridge['x'], ridge['y'], s=1, color='darkblue', label='Ridges (PLV ≥ 0.75)', alpha=0.8)
+
+plt.title('ROTE Prime ψ-Shells: Ridge vs Void Spiral Embedding')
+plt.axis('equal')
+plt.legend()
+plt.xlabel('x')
+plt.ylabel('y')
+plt.grid(True)
+plt.tight_layout()
+plt.savefig('spiral_ridge_plot.png', dpi=300)
+plt.show()
